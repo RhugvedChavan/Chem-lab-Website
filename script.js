@@ -34,7 +34,7 @@ function closeModalFunc() {
 openBtn.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click', closeModalFunc);
 
-// Close modal when clicking outside
+//Close modal when clicking outside
 modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModalFunc();
 });
