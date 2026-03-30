@@ -147,7 +147,7 @@ nav {
 }
 .hero-content {
     max-width: 900px;
-    padding: 2rem;
+    padding: 1rem;
     z-index: 2;
     animation: fadeInUp 1s ease-out;
 }
@@ -159,6 +159,8 @@ nav {
     background-clip: text;
     color: transparent;
     margin-bottom: 1rem;
+    margin-top: -60px;
+    
 }
 .hero-content h3 {
     font-size: 1.4rem;
@@ -469,4 +471,159 @@ footer {
 
 
 
+/* Innovation Big Box */
+.innovation-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 60px 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Innovation Paragraph */
+.innovation-para {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    color: #334155;
+}
+
+/* Innovation Cards */
+.innovation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Single Card */
+.innovation-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effect */
+.innovation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.innovation-card i {
+    font-size: 40px;
+    color: #0f4c81;
+    margin-bottom: 15px;
+}
+
+/* Card Heading */
+.innovation-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+/* Card Text */
+.innovation-card p {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/*impact card */
+.impact-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   /* ✅ 4 boxes side by side */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.impact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.impact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.impact-card h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.impact-card p {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+/* BIG OUTER BOX */
+.research-box {
+    background: white;
+    padding: 80px 60px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 1300px;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+/* SMALL BOX GRID */
+.research-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+    transition: 0.3s ease;
+}
+
+/* SMALL CARD */
+.research-card {
+    background: white ;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+/* CARD HOVER */
+.research-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.research-card i {
+    font-size: 35px;
+    color: #10b981;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* TITLE */
+.research-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+/* TEXT */
+.research-card p {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.6;
+}
 
