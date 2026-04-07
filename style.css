@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f8fafc;
+    background: #f0f9ff;
     color: #0f172a;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -64,7 +64,7 @@ body {
 
 /* Navigation */
 nav {
-    position: relative;
+    position:sticky;
     top: 0;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(12px);
@@ -305,7 +305,7 @@ nav {
     margin-bottom: 0.5rem;
 }
 .leadership-card p {
-    color: #475569;
+    color: black;
     line-height: 1.5;
 }
 .leadership-card:hover{
@@ -545,6 +545,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
+    margin-bottom: 50px;
+    margin-top:50px;
 }
 
 /* Single Card */
@@ -603,7 +605,7 @@ footer {
 
 /* Increase icon size */
 .impact-card i {
-    font-size: 3rem; /* increase this value (try 4rem, 5rem if needed) */
+    font-size: 2.5rem; /* increase this value (try 4rem, 5rem if needed) */
     margin-bottom: 15px;
     color: #0f4c81; /* optional: nice blue glow */
     transition: 0.3s ease;
