@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborate With Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="collaboration.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animated"></div>
+
+  <!-- Floating Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Page Content -->
+  <div class="page">
+
+    <!-- ========== HEADER ========== -->
+    <div class="header">
+      <div class="header-badge">Open for Collaboration</div>
+      <h1>Collaborate <span>With Us</span></h1>
+      <p>We welcome partnerships that push boundaries — from academic discovery to real-world industry impact.</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- ========== CARDS ========== -->
+    <div class="cards">
+
+      <!-- Card 1: Academic Research — White -->
+      <div class="card card-white" onclick="ripple(this)">
+        <div class="card-shimmer"></div>
+        <div class="card-deco card-deco-1"></div>
+        <div class="card-deco card-deco-2"></div>
+        <div class="card-num">01</div>
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span class="card-tag">Research</span>
+        <h2 class="card-title">Academic Research</h2>
+        <p class="card-desc">
+          Joint research projects in computational chemistry and AI —
+          working at the frontier of scientific discovery.
+        </p>
+        <a class="card-arrow" href="#">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Card 2: Industry Collaboration — Light Blue -->
+      <div class="card card-lightblue" onclick="ripple(this)">
+        <div class="card-shimmer"></div>
+        <div class="card-deco card-deco-1"></div>
+        <div class="card-deco card-deco-2"></div>
+        <div class="card-num">02</div>
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+            <line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <span class="card-tag">Industry</span>
+        <h2 class="card-title">Industry Collaboration</h2>
+        <p class="card-desc">
+          Applications in spectral analysis, chemical data processing, and
+          automation — bridging science and enterprise.
+        </p>
+        <a class="card-arrow" href="#">
+          Explore partnership
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Card 3: Student Opportunities — Navy -->
+      <div class="card card-navy" onclick="ripple(this)">
+        <div class="card-shimmer"></div>
+        <div class="card-deco card-deco-1"></div>
+        <div class="card-deco card-deco-2"></div>
+        <div class="card-num">03</div>
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <span class="card-tag">Students</span>
+        <h2 class="card-title">Student Opportunities</h2>
+        <p class="card-desc">
+          Internships, research projects, and thesis work — empowering the
+          next generation of researchers and innovators.
+        </p>
+        <a class="card-arrow" href="#">
+          Apply now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ========== CTA ========== -->
+    <div class="cta">
+      <p>Ready to build something meaningful together?</p>
+      <a class="cta-btn" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        Start a Conversation
+      </a>
+    </div>
+
+  </div>
+
+  <script src="collaboration.js"></script>
+</body>
+</html>
