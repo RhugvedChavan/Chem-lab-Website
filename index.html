@@ -37,10 +37,25 @@
         <a href="#innovation">Innovation</a>
         <a href="#impact">Impact</a>
         <a href="#leadership">Leadership</a>
+        <a href="#cta">Collaboration</a>
     </div>
-    <div class="login-btn" id="openLoginBtn">
-        <i class="fa-solid fa-user"></i>
+    
+
+<div class="dropdown">
+    <button class="dropbtn">Menu ▾</button>
+    
+    <div class="dropdown-content">
+        <a href="about_page.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Our Team</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="publications.html">Publication</a>
+        <a href="collaboration.html">Collaboration</a>
+        <a href="contact us.html">Contact us</a>
     </div>
+</div>
+
 </nav>
 
 <!-- SECTION 1: HERO (Home) -->
@@ -51,9 +66,12 @@
         <h3>AI-Driven Research in Computational Chemistry, Spectral Intelligence & Chemical Data Science</h3>
         <p>Bridging Chemistry, Computation, and Artificial Intelligence for Real-World Impact</p>
         <div class="buttons">
-            <button class="secondary explore-btn">Explore Research</button>
-            <button class="secondary projects-btn">View Projects</button>
-            <button class="secondary collaborate-btn">Collaborate With Us</button>
+             <a href="research.html">
+            <button class="secondary explore-btn">Explore Research</button></a>
+            <a href="projects.html">
+            <button class="secondary projects-btn">View Projects</button></a>
+             <a href="collaboration.html">
+            <button class="secondary collaborate-btn">Collaborate With Us</button></a>
         </div>
     </div>
 </section>
@@ -64,6 +82,8 @@
     <p style="text-align: center; max-width: 1000px; margin: 0 auto; font-size: 1.3rem; color: #334155;">The Digital Chemistry Lab at the University of Mumbai focuses on integrating computational chemistry, artificial intelligence, and data-driven approaches to solve complex chemical problems.
 Our work combines theoretical understanding with modern computational tools to develop efficient, scalable, and intelligent solutions for chemical analysis and research. We Develop cutting-edge platforms such as Spectral Hub,which simplifies complex spectral data analysis,and Q-Nebula,an AI-powered quantum chemistry environment for 
  molecular modelling and prediction.By combining chemometrics,quantum mechanics, and machine learning, we aim to empower researchers,industries and academic institutions with intelligent tools that accelerate innovation and decision-making in chemistry</p>
+
+</div>
 </section>
 
 <!-- SECTION 3: RESEARCH AREAS -->
@@ -121,30 +141,41 @@ Our work combines theoretical understanding with modern computational tools to d
 
             <div class="innovation-card" data-aos="fade-right">
                 <i class="fas fa-wave-square"></i>
-                <h3>Unmix-X</h3>
+                <h3>
+                    <span class="dark-text">Unmix</span>-<span class="blue-text">X</span>
+                </h3>
                 <p>Advanced spectral signal separation to extract meaningful chemical patterns from mixed spectral datasets.</p>
             </div>
 
             <div class="innovation-card" data-aos="fade-up">
                 <i class="fas fa-microscope"></i>
-                <h3>Decode-X</h3>
+                <h3>
+                    <span class="dark-text">Decode</span>-<span class="blue-text">X</span>
+                </h3>
                 <p>Automated spectral interpretation engine that converts raw spectral data into chemical insights and structure predictions.</p>
             </div>
 
             <div class="innovation-card" data-aos="fade-left">
                 <i class="fas fa-chart-line"></i>
-                <h3>Predict-X</h3>
+                <h3>
+                    <span class="dark-text">Predict</span>-<span class="blue-text">X</span>
+                </h3>
                 <p>AI-driven spectral simulation system to predict spectral outputs for unknown or newly designed chemical compounds.</p>
             </div>
             
         </div>
-    <p class="innovation-para">
-            <strong class="gradient-text">Q-Nebula </strong>, Al-Powered Quantum Chemistry Platform, Q-Nebula is a cloud-enabled computational chemistry platform that integrates quantum mechanical calculations with Al/ML models to deliver faster and more scalable molecular insights.
+
+        <p class="innovation-para">
+            <strong class="gradient-text">Q-Nebula </strong>, AI-Powered Quantum Chemistry Platform, Q-Nebula is a cloud-enabled computational chemistry platform that integrates quantum mechanical calculations with AI/ML models to deliver faster and more scalable molecular insights.
         </p>
+
         <div class="innovation-cards">
+
             <div class="innovation-card" data-aos="fade-right">
                 <i class="fa-solid fa-atom"></i>
-                <h3>Q-Core</h3>
+                <h3>
+                    <span class="dark-text">Q</span>-<span class="blue-text">Core</span>
+                </h3>
                 <p>High-accuracy simulations for:- </br></p>
                 <p>1. Molecular structure optimization </br></p>
                 <p>2. Energy calculations (HOMO-LUMO, band gaps) </br></p>
@@ -153,13 +184,19 @@ Our work combines theoretical understanding with modern computational tools to d
 
             <div class="innovation-card" data-aos="fade-up">
                 <i class="fa-solid fa-dna"></i>
-                <h3>Q-Intellect</h3>
-                <p> Hybrid Al models trained on quantum data to:- </br></p>
+                <h3>
+                    <span class="dark-text">Q</span>-<span class="blue-text">Intellect</span>
+                </h3>
+                <p> Hybrid AI models trained on quantum data to:- </br></p>
                 <p>1. Predict molecular properties instantly</br></p>
                 <p>2. Reduce computational cost significantly</br></p>
                 <p>3. Enable high-throughput virtual screening</br></p>
             </div>
+
+        </div>
+
     </div>
+
 </section>
 
 <!-- SECTION 5: IMPACT -->
@@ -207,37 +244,26 @@ Our work combines theoretical understanding with modern computational tools to d
     </div>
     <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
         <p style="font-weight: 500;">Our lab consists of passionate researchers and students working across computational chemistry, AI, and spectroscopy.</p>
+         <a href="team.html">
+
         <button class="primary team-view-btn">View Full Team <i class="fas fa-arrow-right"></i></button>
+        </a>
     </div>
 </section>
 
 <!-- CTA Section (Collaborate) -->
-<section class="cta" data-aos="zoom-in">
+<section id="cta" class="cta" data-aos="zoom-in" class="section">
     <h2>Collaborate With Us</h2>
-    <button id="collabModalBtn">Contact Us <i class="fas fa-envelope"></i></button>
+    <a href="contact us.html">
+    <button id="collabModalBtn">Contact Us<i class="fas fa-envelope"></i></button>
+    </a>
+
 </section>
 
 <footer>
     <p>© 2026 Digital Chemistry Lab | University of Mumbai | Pioneering AI in Chemical Sciences</p>
 </footer>
 
-<!-- LOGIN MODAL -->
-<div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" id="closeModalBtn">&times;</span>
-        <h2><i class="fas fa-flask"></i> Lab Access</h2>
-        <p>Sign in </p>
-        <div class="input-group">
-            <input type="text" id="loginUsername" placeholder="Email / Username" value="researcher@dclab.edu">
-        </div>
-        <div class="input-group">
-            <input type="password" id="loginPassword" placeholder="Password" value="digitalchem">
-        </div>
-        <button class="modal-btn" id="submitLoginBtn">Sign In <i class="fas fa-arrow-right-to-bracket"></i></button>
-        <div class="login-message" id="loginMessage"></div>
-        <p style="margin-top: 1rem; font-size: 0.75rem;"></p>
-    </div>
-</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
