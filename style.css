@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f0f9ff;
+    background: #f8fafc;
     color: #0f172a;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -64,7 +64,7 @@ body {
 
 /* Navigation */
 nav {
-    position:sticky;
+    position: sticky;
     top: 0;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(12px);
@@ -114,23 +114,6 @@ nav {
 .nav-links a:hover {
     color: #0f4c81;
     transform: translateY(-2px);
-}
-.login-btn {
-    background: #0f4c81;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: white;
-    box-shadow: 0 4px 8px rgba(16,185,129,0.3);
-}
-.login-btn:hover {
-    transform: scale(1.08);
-    background:#0f4c81;
 }
 
 /* Hero Section with animated gradient */
@@ -305,7 +288,7 @@ nav {
     margin-bottom: 0.5rem;
 }
 .leadership-card p {
-    color: black;
+    color: #475569;
     line-height: 1.5;
 }
 .leadership-card:hover{
@@ -536,8 +519,8 @@ footer {
 .innovation-para {
     font-size: 18px;
     margin-top: 15px;
-    margin-bottom: 40px;
-    color: #334155;
+    margin-bottom:10px;
+    color: #0f4c81;
 }
 
 /* Innovation Cards */
@@ -545,8 +528,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
-    margin-bottom: 50px;
-    margin-top:50px;
 }
 
 /* Single Card */
@@ -623,9 +604,9 @@ footer {
 
 .impact-card p {
     font-size: 16px;
-    color: black;
+    color:#0f4c81;
     line-height: 1.6;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 /* BIG OUTER BOX */
@@ -686,3 +667,91 @@ footer {
     color: #475569;
     line-height: 1.6;
 }
+
+/* ===== INNOVATION TEXT COLOR FIX ===== */
+.innovation-card .dark-text {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.innovation-card .blue-text {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button styling */
+.dropbtn {
+    background: #0f4c81;
+    color: white;
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.dropbtn:hover {
+    background:  #0891b2;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* IMPORTANT: removes gap */
+    right: 0;
+
+    background: #ffffff; /* solid white */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+    
+/* Links inside dropdown */
+.dropdown-content a {
+    color: #0f172a;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+/* Hover on links */
+.dropdown-content a:hover {
+    background: #f1f5f9; /* light gray */
+    color: #0f4c81; /* blue highlight */
+    padding-left: 20px; /* smooth slide effect */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* creates invisible hover bridge */
+}
+
