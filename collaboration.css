@@ -1,771 +1,438 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ============================================================
+   collaborate.css — Collaborate With Us Page
+   ============================================================ */
+
+
+/* ============================================================
+   1. RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: #f8fafc;
-    color: #0f172a;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-/* Custom cursor glow effect */
-.cursor-glow {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(23, 126, 244, 0.08) 0%, rgba(16, 185, 129, 0) 70%);
-    position: fixed;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.08s ease-out;
-    filter: blur(45px);
-    opacity: 0.5;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: #e2e8f0;
-}
-::-webkit-scrollbar-thumb {
-    background: #0f4c81;
-    border-radius: 12px;
-}
-
-/* Top Bar Animation */
-.top-bar {
-    background: linear-gradient(90deg, #0f172a, #1e293b);
-    color: #e2e8f0;
-    text-align: center;
-    padding: 10px 16px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    z-index: 100;
-}
-.top-bar p {
-    display: inline-block;
-    animation: marquee 15s linear infinite;
-}
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-/* Navigation */
-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    padding: 0.8rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-.logo {
-    width: 60px;   /* adjust size */
-    height: 60px;
-    object-fit: contain;
-}
-
-}
-.logo-text {
-    font-size: 1.2rem;
-    font-weight: 600;
-    background: linear-gradient(135deg, #0f172a, #0f4c81);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: -0.3px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #1e293b;
-    font-weight: 500;
-    transition: 0.2s;
-    font-size: 0.95rem;
-}
-.nav-links a:hover {
-    color: #0f4c81;
-    transform: translateY(-2px);
-}
-
-/* Hero Section with animated gradient */
-.hero {
-    min-height: 90vh;
-    background: linear-gradient(125deg, #f1f5f9 0%, #e6f7f0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-.hero::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 40%, rgba(16,185,129,0.08) 0%, transparent 60%);
-    pointer-events: none;
-}
-.hero-content {
-    max-width: 900px;
-    padding: 2rem;
-    z-index: 2;
-    animation: fadeInUp 1s ease-out;
-}
-/* ONLY THIS PART IS MODIFIED */
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white;
-}
-
-/* FIXED TEXT COLORS FOR NAVY BACKGROUND */
-.hero-content h1 {
-    font-size: 8rem;
-    margin-bottom: 3rem;
-    color: #f8fafc; /* bright white */
-    text-shadow: 0 0 12px rgba(56, 189, 248, 0.4); /* glow */
-    margin-top: -100px;
-}
-
-.hero-content h3 {
-    color: #e2e8f0; /* soft light gray */
-    margin-top: 20px;
-    font-size:1.1rem;
-}
-
-.hero-content p {
-    color: #cbd5f5; /* light bluish */
-    margin-top: 20px;
-}
-
-\.hero-content p {
-    margin-bottom: 35px; /* adds gap below text */
-}
-
-.hero-content {
-    max-width: 900px;
-    padding: 2rem;
-    z-index: 2;
-    animation: fadeInUp 1s ease-out;
-
-    transform: translateY(-60px); /* 🔼 moves text upwards */
-}
-
-.buttons {
-    margin-top: 25px; /* pushes buttons slightly down */
-}
-
-.buttons {
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.secondary {
-    background: transparent;
-    border: 1.5px solid #0f4c81;
-    padding: 12px 28px;
-    border-radius: 40px;
-    font-weight: 600;
-    color: #0f4c81;
-    cursor: pointer;
-    transition: all 0.25s;
-    font-size: 0.9rem;
-}
-.secondary:hover {
-    background: #0f4c81;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 20px -8px rgba(16,185,129,0.4);
-}
-
-/* Section Styles */
-.section {
-    padding: 80px 5%;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-.section h2 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    background: linear-gradient(135deg, #0f172a, #0f4c81);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-    width: 100%;
-}
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-.card {
-    background: white;
-    border-radius: 28px;
-    padding: 1.8rem;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.2rem;
-    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
-    transition: all 0.4s cubic-bezier(0.2,0.9,0.4,1.1);
-    border: 1px solid #e2e8f0;
-    cursor: default;
-}
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #0f4c81;
-    box-shadow: 0 20px 30px -12px rgba(16,185,129,0.2);
-}
-.innovation-list, .impact-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-.innovation-list li, .impact-list li {
-    background: #f1f5f9;
-    padding: 12px 24px;
-    border-radius: 60px;
-    font-weight: 500;
-    border-left: 3px solid #0f4c81;
-    transition: 0.2s;
-}
-.innovation-list li:hover, .impact-list li:hover {
-    transform: translateY(-8px);
-    border-color: #0f4c81;
-    box-shadow: 0 20px 30px -12px rgba(16,185,129,0.2);
-}
-.leadership-card {
-    background: linear-gradient(145deg, #ffffff, #f8fafc);
-    border-radius: 32px;
-    padding: 2rem;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #e2e8f0;
-}
-.leadership-card h3 {
-    font-size: 1.8rem;
-    color: #0f172a;
-    margin-bottom: 0.5rem;
-}
-.leadership-card p {
-    color: #475569;
-    line-height: 1.5;
-}
-.leadership-card:hover{
-    transform: translateY(-8px);
-    border-color: #0f4c81;
-    box-shadow: 0 20px 30px -12px rgba(16,185,129,0.2);
-}
-
-.primary {
-    background: #0f4c81;
-    border: none;
-    padding: 12px 32px;
-    border-radius: 40px;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s;
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-.primary:hover {
-    background: #0f4c81;
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(16,185,129,0.3);
-}
-.cta {
-    background: linear-gradient(125deg, #0f172a, #1e293b);
-    text-align: center;
-    padding: 70px 20px;
-    border-radius: 48px;
-    margin: 40px 5%;
-    color: white;
-}
-.cta h2 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-.cta button {
-    background: #0f4c81;
-    border: none;
-    padding: 14px 38px;
-    border-radius: 60px;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.2s;
-    color: white;
-}
-.cta button:hover {
-    transform: scale(1.05);
-    background: #0f4c81;
-    box-shadow: 0 8px 20px #10b98150;
-}
-footer {
-    background: #0f172a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.85rem;
-}
-
-/* Login Modal */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.25s ease;
-}
-.modal.active {
-    visibility: visible;
-    opacity: 1;
-}
-.modal-content {
-    background: white;
-    border-radius: 48px;
-    padding: 2.2rem;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    transform: scale(0.96);
-    transition: 0.3s;
-    box-shadow: 0 40px 60px rgba(0,0,0,0.3);
-}
-.modal.active .modal-content {
-    transform: scale(1);
-}
-.modal-content h2 {
-    color: #0f172a;
-    margin-bottom: 1rem;
-}
-.modal-content p {
-    color: #475569;
-    margin-bottom: 1.5rem;
-}
-.input-group {
-    margin: 1rem 0;
-}
-.input-group input {
-    width: 100%;
-    padding: 14px 18px;
-    border: 1.5px solid #e2e8f0;
-    border-radius: 60px;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.2s;
-}
-.input-group input:focus {
-    border-color: #0f4c81;
-    box-shadow: 0 0 0 3px #10b98120;
-}
-.modal-btn {
-    background: #0f4c81;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 60px;
-    font-weight: 700;
-    color: white;
-    cursor: pointer;
-    margin-top: 0.5rem;
-}
-.modal-btn:hover {
-    background: #0f4c81;
-}
-.close-modal {
-    position: absolute;
-    top: 20px;
-    right: 28px;
-    font-size: 28px;
-    cursor: pointer;
-    color: #64748b;
-}
-.login-message {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, #0f4c81, #0f172a);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-/* Responsive */
-
-.hero {
-    position: relative;
-    height: 100vh;
-    background: #0a192f; /* Navy Blue */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero button {
-    padding: 12px 24px;
-    border: none;
-    background: #38bdf8;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.hero button:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
+  font-family: 'Inter', sans-serif;
+  background: #f0f6ff;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
+/* ============================================================
+   2. ANIMATED BACKGROUND
+   ============================================================ */
+.bg-animated {
+  position: fixed; inset: 0;
+  background: linear-gradient(135deg, #f0f9ff 100%);
+  z-index: 0;
+}
+.bg-animated::before {
+  content: ''; position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(30,80,160,0.08) 0%, transparent 70%);
+  top: -200px; left: -200px;
+  animation: drift1 12s ease-in-out infinite alternate;
+}
+.bg-animated::after {
+  content: ''; position: absolute;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(100,180,255,0.12) 0%, transparent 70%);
+  bottom: -150px; right: -150px;
+  animation: drift2 14s ease-in-out infinite alternate;
+}
+@keyframes drift1 { from { transform: translate(0,0); } to { transform: translate(80px,60px); } }
+@keyframes drift2 { from { transform: translate(0,0); } to { transform: translate(-60px,-80px); } }
 
-/* Innovation Big Box */
-.innovation-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 60px 40px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
+
+/* ============================================================
+   3. FLOATING PARTICLES
+   ============================================================ */
+.particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.particle  { position: absolute; border-radius: 50%; background: rgba(21,101,192,0.15); animation: floatUp linear infinite; }
+@keyframes floatUp {
+  0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-100px) scale(1); opacity: 0; }
 }
 
-/* Innovation Paragraph */
-.innovation-para {
-    font-size: 18px;
-    margin-top: 15px;
-    margin-bottom:10px;
-    color: #0f4c81;
+
+/* ============================================================
+   4. NAV — floating Menu button, top-right (same look as home page)
+   ============================================================ */
+
+/* Floating wrapper — fixed top-right, no background bar */
+#menuDropdown {
+  position: fixed;
+  top: 16px; right: 24px;
+  z-index: 1000;
+  display: inline-block;
+  padding-bottom: 10px; /* invisible hover bridge */
 }
 
-/* Innovation Cards */
-.innovation-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-/* Single Card */
-.innovation-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-/* Hover Effect */
-.innovation-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* Icon */
-.innovation-card i {
-    font-size: 40px;
-    color: #0f4c81;
-    margin-bottom: 15px;
-}
-
-/* Card Heading */
-.innovation-card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #0f172a;
-}
-
-/* Card Text */
-.innovation-card p {
-    font-size: 15px;
-    color: #475569;
-    line-height: 1.6;
-}
-
-/*impact card */
-.impact-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);   /* ✅ 4 boxes side by side */
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.impact-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-/* Increase icon size */
-.impact-card i {
-    font-size: 2.5rem; /* increase this value (try 4rem, 5rem if needed) */
-    margin-bottom: 15px;
-    color: #0f4c81; /* optional: nice blue glow */
-    transition: 0.3s ease;
-}
-
-.impact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-.impact-card h3 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.impact-card p {
-    font-size: 16px;
-    color:#0f4c81;
-    line-height: 1.6;
-    font-weight: 500;
-}
-
-/* BIG OUTER BOX */
-.research-box {
-    background: white;
-    padding: 80px 60px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    max-width: 1300px;
-    width: 95%;
-    margin: auto;
-    text-align: center;
-}
-
-/* SMALL BOX GRID */
-.research-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-top: 40px;
-    transition: 0.3s ease;
-}
-
-/* SMALL CARD */
-.research-card {
-    background: white ;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-/* CARD HOVER */
-.research-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* ICON */
-.research-card i {
-    font-size: 35px;
-    color: #0f4c81;
-    margin-bottom: 12px;
-    display: block;
-}
-
-/* TITLE */
-.research-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #0f172a;
-}
-
-/* TEXT */
-.research-card p {
-    font-size: 15px;
-    color: #475569;
-    line-height: 1.6;
-}
-
-/* ===== INNOVATION TEXT COLOR FIX ===== */
-.innovation-card .dark-text {
-    color: #0f172a;
-    font-weight: 600;
-}
-
-.innovation-card .blue-text {
-    color: #2563eb;
-    font-weight: 600;
-}
-
-/* Dropdown container */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Button styling */
+/* Button — identical color/shape to home page */
 .dropbtn {
-    background: #0f4c81;
-    color: white;
-    padding: 10px 18px;
-    font-size: 14px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
+  background: #0f4c81;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 14px rgba(15,76,129,0.30);
+  white-space: nowrap;
 }
+.dropbtn:hover { background: #0891b2; }
 
-/* Hover effect */
-.dropbtn:hover {
-    background:  #0891b2;
-}
-
-/* Dropdown content */
+/* Panel — identical to home page */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%; /* IMPORTANT: removes gap */
-    right: 0;
-
-    background: #ffffff; /* solid white */
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  min-width: 185px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
-    
-/* Links inside dropdown */
+
+/* Open on hover */
+#menuDropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Links — identical to home page */
 .dropdown-content a {
-    color: #0f172a;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: 500;
-    transition: 0.25s ease;
+  color: #0f172a;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.25s ease, padding-left 0.25s ease, color 0.25s ease;
 }
-
-/* Hover on links */
+.dropdown-content a:first-child { border-radius: 12px 12px 0 0; }
+.dropdown-content a:last-child  { border-radius: 0 0 12px 12px; border-bottom: none; }
 .dropdown-content a:hover {
-    background: #f1f5f9; /* light gray */
-    color: #0f4c81; /* blue highlight */
-    padding-left: 20px; /* smooth slide effect */
+  background: #f1f5f9;
+  color: #0f4c81;
+  padding-left: 20px;
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
+
+/* ============================================================
+   5. PAGE WRAPPER
+   ============================================================ */
+.page {
+  position: relative; z-index: 1;
+  max-width: 960px; margin: 0 auto;
+  padding: 90px 24px 80px; /* Changed from 70px to 90px top padding */
 }
 
-.dropdown-content {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s ease;
+
+/* ============================================================
+   6. HEADER
+   ============================================================ */
+.header {
+  text-align: center; margin-bottom: 56px;
+  opacity: 0; transform: translateY(-30px);
+  animation: fadeDown 0.8s ease forwards 0.2s;
+}
+.header-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #0f4c81; color: #f0f6ff;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 6px 18px; border-radius: 100px; margin-bottom: 20px;
+}
+.header-badge::before {
+  content: ''; width: 6px; height: 6px;
+  background: #64b5f6; border-radius: 50%;
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
 }
 
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.header h1 { font-size: clamp(32px,6vw,56px); color: #0f4c81; line-height: 1.15; margin-bottom: 16px; }
+.header p  { font-size: clamp(14px,2.2vw,17px); color: #0f4c81; max-width: 480px; margin: 0 auto; line-height: 1.7; font-weight: 300; }
+.divider   { width: 60px; height: 3px; background: linear-gradient(90deg,#1565c0,#64b5f6); border-radius: 2px; margin: 24px auto 0; }
+@keyframes fadeDown { to { opacity: 1; transform: translateY(0); } }
+
+
+/* ============================================================
+   7. CARDS GRID
+   Desktop : 3 columns
+   Tablet  : 2 columns (card 3 spans full width)
+   Mobile  : 1 column
+   ============================================================ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px; /* creates invisible hover bridge */
+
+/* ============================================================
+   8. CARD BASE
+   ============================================================ */
+.card {
+  position: relative; border-radius: 20px;
+  padding: 32px 26px 28px; cursor: pointer; overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.4s ease;
+  opacity: 0; transform: translateY(40px);
+}
+.card:nth-child(1) { animation: riseUp 0.7s ease forwards 0.5s; }
+.card:nth-child(2) { animation: riseUp 0.7s ease forwards 0.7s; }
+.card:nth-child(3) { animation: riseUp 0.7s ease forwards 0.9s; }
+@keyframes riseUp { to { opacity: 1; transform: translateY(0); } }
+
+.card:hover { transform: translateY(-10px) scale(1.02); }
+
+.card::after {
+  content: ''; position: absolute;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  pointer-events: none; opacity: 0;
+}
+.card.ripple::after {
+  transform: translate(-50%,-50%) scale(3);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-.innovation-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #0f172a;
+
+/* ============================================================
+   9. CARD THEMES
+   ============================================================ */
+.card-white     { background: #fff; border: 1.5px solid #c8dff8; box-shadow: 0 8px 32px rgba(21,101,192,0.10); }
+.card-white:hover { box-shadow: 0 20px 50px rgba(21,101,192,0.18); border-color: #90caf9; }
+
+.card-lightblue { background: linear-gradient(135deg,#bbdefb 0%,#90caf9 100%); border: 1.5px solid #64b5f6; box-shadow: 0 8px 32px rgba(21,101,192,0.14); }
+.card-lightblue:hover { box-shadow: 0 20px 50px rgba(21,101,192,0.25); }
+
+.card-navy      { background: linear-gradient(135deg,#0d3b8c 0%,#1565c0 100%); border: 1.5px solid #1976d2; box-shadow: 0 8px 32px rgba(13,59,140,0.25); }
+.card-navy:hover { box-shadow: 0 20px 50px rgba(13,59,140,0.40); }
+
+
+/* ============================================================
+   10. CARD SHIMMER
+   ============================================================ */
+.card-shimmer {
+  position: absolute; top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.card:hover .card-shimmer { left: 150%; }
+
+
+/* ============================================================
+   11. CARD DECORATIVE CIRCLES
+   ============================================================ */
+.card-deco { position: absolute; border-radius: 50%; pointer-events: none; }
+.card-deco-1 { width: 120px; height: 120px; top: -40px; right: -40px; }
+.card-deco-2 { width: 80px;  height: 80px;  bottom: -30px; left: -30px; opacity: 0.5; }
+.card-white .card-deco     { background: rgba(21,101,192,0.05); }
+.card-lightblue .card-deco { background: rgba(255,255,255,0.25); }
+.card-navy .card-deco      { background: rgba(255,255,255,0.06); }
+
+
+/* ============================================================
+   12. CARD NUMBER
+   ============================================================ */
+.card-num { position: absolute; top: 20px; right: 24px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; opacity: 0.35; }
+.card-white .card-num     { color: #1565c0; }
+.card-lightblue .card-num { color: #0d3b8c; }
+.card-navy .card-num      { color: #fff; }
+
+
+/* ============================================================
+   13. ICON WRAP
+   ============================================================ */
+.icon-wrap {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px; transition: transform 0.3s ease;
+}
+.card:hover .icon-wrap { transform: rotate(-6deg) scale(1.1); }
+.card-white .icon-wrap     { background: #e3f2fd; }
+.card-lightblue .icon-wrap { background: rgba(255,255,255,0.6); }
+.card-navy .icon-wrap      { background: rgba(255,255,255,0.12); }
+.icon-wrap svg { width: 24px; height: 24px; }
+.card-white .icon-wrap svg     { stroke: #1565c0; }
+.card-lightblue .icon-wrap svg { stroke: #0d3b8c; }
+.card-navy .icon-wrap svg      { stroke: #90caf9; }
+
+
+/* ============================================================
+   14. CATEGORY TAG PILL
+   ============================================================ */
+.card-tag {
+  display: inline-block;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 100px; margin-bottom: 12px;
+}
+.card-white .card-tag     { background: #e3f2fd;               color: #1565c0; }
+.card-lightblue .card-tag { background: rgba(255,255,255,0.55); color: #0d3b8c; }
+.card-navy .card-tag      { background: rgba(255,255,255,0.12); color: #90caf9; }
+
+
+/* ============================================================
+   15. CARD TEXT
+   ============================================================ */
+.card-title { font-size: clamp(17px,2vw,22px); line-height: 1.3; margin-bottom: 10px; }
+.card-white .card-title     { color: #0a2a6e; }
+.card-lightblue .card-title { color: #0d3b8c; }
+.card-navy .card-title      { color: #fff; }
+
+.card-desc { font-size: 14px; line-height: 1.75; font-weight: 400; }
+.card-white .card-desc     { color: #4a6fa5; }
+.card-lightblue .card-desc { color: #1a4f9a; }
+.card-navy .card-desc      { color: rgba(255,255,255,0.75); }
+
+
+/* ============================================================
+   16. CTA SECTION
+   ============================================================ */
+.cta { text-align: center; margin-top: 56px; opacity: 0; animation: riseUp 0.8s ease forwards 1.3s; }
+.cta p { font-size: 15px; color: #4a6fa5; margin-bottom: 20px; }
+
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #0d3b8c; color: #fff;
+  font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500;
+  padding: 14px 32px; border-radius: 100px; border: none; cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 20px rgba(13,59,140,0.30);
+}
+.cta-btn:hover { background: #1565c0; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,59,140,0.40); }
+.cta-btn svg { width: 18px; height: 18px; }
+
+
+/* ============================================================
+   17. EMAIL MODAL
+   ============================================================ */
+.email-modal {
+  display: none; position: fixed; inset: 0;
+  background: rgba(10,42,110,0.75); backdrop-filter: blur(8px);
+  z-index: 2000; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.email-modal.show { display: flex; opacity: 1; }
+
+.email-modal-content {
+  background: #fff; border-radius: 24px;
+  max-width: 520px; width: 90%; max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(13,59,140,0.4);
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.email-modal.show .email-modal-content { transform: scale(1) translateY(0); }
+
+.email-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 28px; border-bottom: 1.5px solid #e3f2fd;
+}
+.email-modal-header h3 { font-size: 20px; color: #0a2a6e; font-weight: 600; }
+
+.email-modal-close {
+  background: none; border: none; font-size: 28px; color: #4a6fa5; cursor: pointer;
+  width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: background 0.2s, color 0.2s;
+}
+.email-modal-close:hover { background: #e3f2fd; color: #1565c0; }
+
+.email-modal-body { padding: 20px 28px 28px; }
+.email-info { font-size: 14px; color: #4a6fa5; margin-bottom: 16px; }
+.email-options { display: flex; flex-direction: column; gap: 12px; }
+
+.email-option {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px; background: #f0f6ff;
+  border: 1.5px solid #c8dff8; border-radius: 14px;
+  cursor: pointer; transition: all 0.25s; text-align: left; width: 100%;
+}
+.email-option:hover { background: #e3f2fd; border-color: #90caf9; transform: translateX(4px); box-shadow: 0 4px 16px rgba(21,101,192,0.12); }
+.email-option svg { width: 26px; height: 26px; stroke: #1565c0; flex-shrink: 0; }
+.email-option-text { display: flex; flex-direction: column; gap: 3px; }
+.email-option-text strong { font-size: 15px; color: #0a2a6e; font-weight: 600; }
+.email-option-text span   { font-size: 13px; color: #4a6fa5; }
+
+/* Copy notification */
+.copy-notification {
+  position: fixed; bottom: 28px; left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #0d3b8c; color: #fff;
+  padding: 13px 26px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  box-shadow: 0 8px 24px rgba(13,59,140,0.35);
+  z-index: 3000; opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), opacity 0.4s ease;
+}
+.copy-notification.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+
+/* ============================================================
+   18. RESPONSIVE — TABLET  ≤ 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  .page   { padding: 80px 20px 72px; } /* Ensure enough top space */
+  .cards  { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  /* 3rd card spans both columns */
+  .card:nth-child(3) { grid-column: 1 / -1; }
+  .header { margin-bottom: 40px; }
 }
 
-/* Extra spacing for Q-Nebula */
-.qnebula-title {
-    margin-top: 50px;
-    font-weight: 700;
+
+
+/* ============================================================
+   19. RESPONSIVE — MOBILE  ≤ 500px
+   ============================================================ */
+@media (max-width: 500px) {
+  /* Menu button repositioned for mobile */
+  #menuDropdown {
+    top: 12px;
+    right: 16px;
+  }
+  
+  .dropbtn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .page          { padding: 70px 16px 64px; } /* Increased top padding */
+  .header        { margin-bottom: 28px; }
+  .header h1     { font-size: clamp(26px,8.5vw,34px); }
+  .header p      { font-size: 14px; padding: 0 2px; }
+  .header-badge  { font-size: 10px; padding: 5px 14px; }
+  /* Single column */
+  .cards               { grid-template-columns: 1fr; gap: 14px; }
+  .card:nth-child(3)   { grid-column: auto; }
+  .card                { padding: 24px 20px 20px; border-radius: 16px; }
+  .card-title          { font-size: 17px; }
+  .card-desc           { font-size: 13.5px; line-height: 1.65; }
+  .icon-wrap           { width: 46px; height: 46px; margin-bottom: 16px; }
+  /* No hover lift on touch */
+  .card:hover { transform: none; }
+  /* CTA */
+  .cta     { margin-top: 32px; }
+  .cta-btn { width: 100%; max-width: 300px; justify-content: center; padding: 15px 20px; }
+  /* Modal */
+  .email-modal-content   { width: 96%; border-radius: 18px; }
+  .email-modal-header    { padding: 18px 20px; }
+  .email-modal-body      { padding: 16px 20px 22px; }
+  .email-modal-header h3 { font-size: 17px; }
+  .email-option          { padding: 13px 14px; }
+  .email-option-text strong { font-size: 14px; }
 }
