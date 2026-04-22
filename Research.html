@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Areas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="research.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="scrollToSection('compchem')">Computational Chemistry</button>
+      <button class="nav-btn" onclick="scrollToSection('aichem')">Artificial Intelligence in Chemistry</button>
+      <button class="nav-btn" onclick="scrollToSection('spectral')">Spectral Data Intelligence</button>
+      <button class="nav-btn" onclick="scrollToSection('automation')">Process Automation</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="dropdown">
+        <button class="dropbtn">Menu ▾</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="about_page.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="team.html">Our Team</a>
+          <a href="facilities.html">Lab Facilities & Tools</a>
+          <a href="publications.html">Publication</a>
+          <a href="collaboration.html">Collaboration</a>
+          <a href="contact us.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE TITLE BANNER -->
+  <div class="page-title-banner">
+    <h1>Research Areas</h1>
+  </div>
+
+  <!-- §1 COMPUTATIONAL CHEMISTRY -->
+  <div class="research-section" id="compchem">
+    <canvas id="chemBg" class="section-canvas"></canvas>
+    <div class="split-layout section-reveal">
+      <div class="split-title-panel">
+        <div>
+          <h1 class="section-title">Computational<br>Chemistry</h1>
+          <span class="title-accent"></span>
+        </div>
+      </div>
+
+      <div class="split-divider-v"></div>
+
+      <div class="split-content-panel">
+        <div class="content-glass">
+          <p class="content-text">
+            A powerful bridge between theoretical physics and experimental discovery, allowing us to explore the molecular world through a digital lens. By applying rigorous quantum chemical methods, we investigate molecular structures, explore complex reaction mechanisms, and calculate precise energetics to uncover the fundamental principles of chemical reactivity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- §2 ARTIFICIAL INTELLIGENCE IN CHEMISTRY -->
+  <div class="research-section" id="aichem">
+    <canvas id="aiBg" class="section-canvas"></canvas>
+    <div class="split-layout section-reveal">
+      <div class="split-content-panel left">
+        <div class="content-glass">
+          <p class="content-text">
+            Artificial intelligence is transforming chemistry by turning vast amounts of raw data into actionable insights and predictive power. By employing sophisticated machine learning models, we accurately forecast chemical properties, anticipate reaction outcomes, and interpret complex spectral features — exploring chemical space far more efficiently than traditional trial-and-error methods.
+          </p>
+        </div>
+      </div>
+
+      <div class="split-divider-v"></div>
+
+      <div class="split-title-panel right">
+        <div>
+          <h1 class="section-title right">Artificial<br>Intelligence<br>in Chemistry</h1>
+          <span class="title-accent right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- §3 SPECTRAL DATA INTELLIGENCE -->
+  <div class="research-section" id="spectral">
+    <canvas id="specBg" class="section-canvas"></canvas>
+    <div class="split-layout section-reveal">
+      <div class="split-title-panel">
+        <div>
+          <h1 class="section-title">Spectral<br>Data<br>Intelligence</h1>
+          <span class="title-accent"></span>
+        </div>
+      </div>
+
+      <div class="split-divider-v"></div>
+
+      <div class="split-content-panel">
+        <div class="content-glass">
+          <p class="content-text">
+            Bridges the gap between raw analytical output and automated chemical insight. By applying advanced AI techniques to the interpretation of complex IR, NMR, and mass spectra, we move beyond manual identification toward a robust, scalable framework — reducing human error and significantly increasing the accuracy of structural determination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- §4 PROCESS AUTOMATION -->
+  <div class="research-section" id="automation">
+    <canvas id="autoBg" class="section-canvas"></canvas>
+    <div class="split-layout section-reveal">
+      <div class="split-content-panel left">
+        <div class="content-glass">
+          <p class="content-text">
+            The backbone of the modern laboratory — transforming manual protocols into seamless digital workflows. By designing custom tools to automate routine tasks, we significantly accelerate the pace of research while ensuring a level of reproducibility that is difficult to achieve by hand, freeing researchers to focus on high-level analysis.
+          </p>
+        </div>
+      </div>
+
+      <div class="split-divider-v"></div>
+
+      <div class="split-title-panel right">
+        <div>
+          <h1 class="section-title right">Process<br>Automation</h1>
+          <span class="title-accent right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="research.js"></script>
+
+</body>
+</html>
