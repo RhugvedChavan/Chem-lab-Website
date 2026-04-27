@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - DigiChem Lab</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left"></div>
+
+    <h1 class="page-title"> Contact Us - DigiChem Lab</h1>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li class="dropdown">
+          <button class="dropbtn">Menu ▾</button>
+
+          <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="about_page.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="team.html">Our Team</a>
+            <a href="facilities.html">Lab Facilities & Tools</a>
+            <a href="publications.html">Publication</a>
+            <a href="collaboration.html">Collaboration</a>
+            <!--  <a href="CONTACT US.html">Contact Us</a>-->
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="info">
+      <h3> Dr. Purav Badani</h3>
+      <p>Department of Chemistry</p>
+      <p>University of Mumbai</p>
+      <p><b>Email:</b> pmbadani@chem.mu.ac.in</p>
+    </div>
+
+    <hr>
+
+    <h3>Send a Message</h3>
+
+    <form id="contactForm">
+      <div class="input-group">
+        <i class="fa-solid fa-address-book"></i>
+        <input type="text" name="name" placeholder="Name" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-at"></i>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-building"></i>
+        <input type="text" name="affiliation" placeholder="Institute/Organization">
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-phone"></i>
+        <input type="text" name="phone" placeholder="Phone">
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="text" name="subject" placeholder="Subject">
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-message"></i>
+        <textarea name="message" placeholder="Message"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- EmailJS CDN (must stay in HTML) -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script src="contact.js"></script>
+
+</body>
+</html>
