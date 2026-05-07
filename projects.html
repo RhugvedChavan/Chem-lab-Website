@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Innovations</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-buttons">
+      <a href="#spectral-hub" class="nav-btn" onclick="popBtn(this)">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 8c2-4 4-4 7 0s5 4 7 0"/>
+        </svg>
+        Spectral Hub
+      </a>
+
+      <a href="#q-nebula" class="nav-btn" onclick="popBtn(this)">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="8" cy="8" r="3"/>
+          <circle cx="8" cy="8" r="7"/>
+        </svg>
+        Q-Nebula
+      </a>
+    </div>
+
+    <div class="nav-right">
+      <div class="dropdown">
+        <button class="dropbtn">Menu ▾</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="about page.html">About</a>
+          <a href="research.html">Research</a>
+          <a href="team.html">Our Team</a>
+          <a href="facilities.html">Lab Facilities & Tools</a>
+          <a href="publications.html">Publication</a>
+          <a href="collaboration.html">Collaboration</a>
+          <a href="contact us.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE TITLE BANNER -->
+  <div class="page-title-banner">
+    <h1>Projects &amp; Innovations</h1>
+  </div>
+
+  <!-- ════════════ SPECTRAL HUB ════════════ -->
+  <section class="section" id="spectral-hub">
+    <canvas id="spectralCanvas"></canvas>
+
+    <div class="section-inner">
+      <div class="section-title" data-anim="fade-left">
+        Spectral<span class="accent"> Hub</span>
+      </div>
+
+      <p class="section-desc" data-anim="fade-up" data-delay="1">
+        An advanced AI-powered platform for real-time chemical analysis using spectral data. By combining sophisticated signal processing with machine learning, it enables accurate interpretation of complex spectral patterns — automating analysis for speed and precision.
+      </p>
+
+      <div class="cards-row three">
+        <div class="card" data-anim="fade-up" data-delay="2" onclick="popCard(this,event)">
+          <div class="card-badge"><span class="dot"></span>Engine</div>
+          <div class="card-title">Unmix-<span class="x">X</span></div>
+          <div class="card-body">
+            A powerful spectral unmixing engine that precisely separates overlapping signals in complex chemical mixtures. Using advanced algorithms, it deconvolutes spectral data into individual components, enabling accurate identification and quantification without the need for chromatographic separation.
+          </div>
+          <div class="card-footer">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 8h12M9 4l5 4-5 4"/>
+            </svg>
+            Signal Separation
+          </div>
+        </div>
+
+        <div class="card" data-anim="fade-up" data-delay="3" onclick="popCard(this,event)">
+          <div class="card-badge"><span class="dot"></span>Intelligence</div>
+          <div class="card-title">Decode-<span class="x">X</span></div>
+          <div class="card-body">
+            An intelligent system that automates the interpretation of spectral data from IR, NMR, and mass spectrometry. By combining machine learning with domain expertise, it quickly decodes complex patterns to identify chemical structures and extract meaningful insights.
+          </div>
+          <div class="card-footer">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 8h12M9 4l5 4-5 4"/>
+            </svg>
+            Pattern Decoding
+          </div>
+        </div>
+
+        <div class="card" data-anim="fade-up" data-delay="4" onclick="popCard(this,event)">
+          <div class="card-badge"><span class="dot"></span>Prediction</div>
+          <div class="card-title">Predict-<span class="x">X</span></div>
+          <div class="card-body">
+            A quantum chemistry–assisted tool that generates simulated spectral data for known and novel compounds. By combining first-principles calculations with machine learning models, it predicts molecular behavior and properties, enabling fast analysis and decision-making without extensive lab experiments.
+          </div>
+          <div class="card-footer">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 8h12M9 4l5 4-5 4"/>
+            </svg>
+            Quantum Prediction
+          </div>
+        </div>
+      </div>
+
+      <div class="key-values" data-anim="zoom-up" data-delay="5" onclick="popCard(this,event)">
+        <h3>Key Values</h3>
+        <ul>
+          <li>Reduce experimental time and cost</li>
+          <li>Enable real-time monitoring and analysis</li>
+          <li>Improve accuracy in complex mixture interpretation</li>
+          <li>Scalable for industrial and research applications</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ════════════ Q-NEBULA ════════════ -->
+  <section class="section" id="q-nebula">
+    <canvas id="nebulaCanvas"></canvas>
+
+    <div class="section-inner">
+      <div class="section-title" data-anim="fade-left">
+        Q-<span class="accent">Nebula</span>
+      </div>
+
+      <p class="section-desc" data-anim="fade-up" data-delay="1">
+        Q-Nebula is a cloud-enabled computational chemistry platform that integrates quantum mechanical calculations with AI/ML models to deliver faster and more scalable molecular insights.
+      </p>
+
+      <div class="cards-row two">
+        <div class="card" data-anim="fade-up" data-delay="2" onclick="popCard(this,event)">
+          <div class="card-badge"><span class="dot"></span>Core Engine</div>
+          <div class="card-title">Q-<span class="x">Core</span></div>
+          <div class="card-body">
+            High-accuracy simulations enable precise molecular structure optimization, ensuring stable and realistic configurations. They provide detailed energy calculations, including HOMO–LUMO levels and band gaps, to understand electronic properties. Additionally, they analyze reaction pathways, helping predict mechanisms, intermediates, and energy barriers.
+          </div>
+          <div class="card-footer">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 8h12M9 4l5 4-5 4"/>
+            </svg>
+            Quantum Simulation
+          </div>
+        </div>
+
+        <div class="card" data-anim="fade-up" data-delay="3" onclick="popCard(this,event)">
+          <div class="card-badge"><span class="dot"></span>AI/ML Layer</div>
+          <div class="card-title">Q-<span class="x">Intellect</span></div>
+          <div class="card-body">
+            Hybrid AI models trained on quantum data enable instant prediction of molecular properties with high accuracy. They significantly reduce computational cost compared to traditional methods, making analysis more efficient. This approach also supports high-throughput virtual screening, accelerating the discovery of new compounds.
+          </div>
+          <div class="card-footer">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 8h12M9 4l5 4-5 4"/>
+            </svg>
+            AI Prediction
+          </div>
+        </div>
+      </div>
+
+      <div class="key-values" data-anim="zoom-up" data-delay="4" onclick="popCard(this,event)">
+        <h3>Key Values</h3>
+        <ul>
+          <li>Accelerate R&amp;D and material discovery</li>
+          <li>Reduce dependency on expensive computational resources</li>
+          <li>Enable predictive chemistry at scale</li>
+          <li>Ideal for academia, startups and industry</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="projects.js"></script>
+
+</body>
+</html>
