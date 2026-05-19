@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications</title>
+
+  <link rel="stylesheet" href="publications.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+
+    <div class="nav-left"></div>
+
+    <h1 class="page-title">PUBLICATIONS</h1>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li class="dropdown">
+          <button class="dropbtn">Menu &#9662;</button>
+          <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="about page.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="team.html">Our Team</a>
+            <a href="facilities.html">Lab Facilities & Tools</a>
+            <a href="collaboration.html">Collaboration</a>
+            <a href="Contact Us.html">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- Controls -->
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search publications...">
+
+    <select id="yearFilter">
+      <option value="all">All Years</option>
+    </select>
+
+    <select id="sortOption">
+      <option value="yearDesc" selected>Year (Newest)</option>
+      <option value="yearAsc">Year (Oldest)</option>
+      <option value="titleAsc">Title (A-Z)</option>
+      <option value="titleDesc">Title (Z-A)</option>
+    </select>
+
+    <button onclick="downloadCSV()">Download CSV</button>
+  </div>
+
+  <!-- Table -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="pubTable"></tbody>
+    </table>
+  </div>
+
+  <script src="publications.js"></script>
+
+</body>
+</html>
