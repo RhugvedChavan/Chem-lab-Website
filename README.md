@@ -47,4 +47,4 @@
 
 # Run & Installation - 
 
-Clone Repository - 
+Clone Repository - https://github.com/RhugvedChavan/Chem-lab-Website.git
