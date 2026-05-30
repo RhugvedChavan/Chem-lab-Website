@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f9ff;
+  text-align: center;
+  color: #0f172a;
+}
+
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 18px 30px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-left {
+  justify-self: start;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  justify-self: center;
+}
+
+.page-title i {
+  margin-right: 10px;
+  color: white;
+}
+
+.nav-right {
+  justify-self: end;
+}
+
+/* ── Dropdown ── */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.dropbtn {
+  background: #0f4c81;
+  color: white;
+  padding: 10px 18px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropbtn:hover {
+  background: #0891b2;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  min-width: 180px;
+}
+
+.dropdown-content a {
+  color: #0f172a;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  transition: 0.25s ease;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background: #f1f5f9;
+  color: #0f4c81;
+  padding-left: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .page-title {
+    font-size: 18px;
+  }
+  .dropbtn {
+    padding: 8px 13px;
+    font-size: 13px;
+  }
+  .dropdown-content {
+    right: 0;
+    left: auto;
+    min-width: 160px;
+  }
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  margin: 80px 0;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #0f172a;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Flip Card */
+.card {
+  width: 260px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.front {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.front img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 4px;
+  border: 3px solid #e2e8f0;
+  box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.15), 0 8px 24px rgba(15, 76, 129, 0.2);
+}
+
+.front h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: white;
+}
+
+.front p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.back {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.back p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Students & Collaborators cards - no flip version */
+.section .card .front {
+  transform: none;
+}
+
+.section .card:not(:has(.inner)) .front {
+  position: relative;
+  transform: none;
+}
+
+.section .card:not(:has(.inner)) {
+  cursor: default;
+}
+
+.section .card:not(:has(.inner)):hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Non-flip card support */
+.section .card:not(:has(.inner)) .front {
+  justify-content: center;
+  text-align: center;
+}
+
+.section .card:not(:has(.inner)) .front h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.section .card:not(:has(.inner)) .front p {
+  font-size: 13px;
+  opacity: 0.9;
+}
