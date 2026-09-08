@@ -1,11 +1,6 @@
 # Digital Chemistry Lab Website :- 
 
-
-1. The Digital Chemistry Lab Website is an academic research-based website designed for the University of Mumbai Digital Chemistry Lab. 
-2. The purpose of this website is to showcase the lab’s work in Computational Chemistry, Artificial Intelligence in Chemistry, Spectral Data Intelligence, and Process Automation.
-3. The website presents research activities, ongoing projects, lab facilities, publications, team members, and collaboration opportunities.
-4. It also highlights the lab’s key innovation platform Spectral-Hub, which provides AI-powered chemical insights from spectral data.
-5. This platform acts as a professional research portal for students, researchers, and industry collaborators.
+The Digital Chemistry Lab Website is an academic research-based platform developed for the University of Mumbai Digital Chemistry Lab. It aims to showcase the lab’s work in Computational Chemistry, Artificial Intelligence in Chemistry, Spectral Data Intelligence, and Process Automation. The website presents the lab’s research activities, ongoing projects, facilities, publications, team members, and collaboration opportunities. It also highlights the lab’s key innovation platform, Spectral-Hub, which provides AI-powered chemical insights from spectral data. Overall, the platform serves as a professional research portal for students, researchers, and industry collaborators.
 
 
 # Objective :-  
